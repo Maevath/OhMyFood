@@ -1,6 +1,29 @@
-@import './_variable';
+@import "./utils/variables";
+@import "./base/typography";
+@import "./utils/mixins";
+@import "./components/buttons";
+@import "./layout/header";
 
-section {
-    background-color: $secondarycolor;
-    color: aqua;
+html {
+    margin: 0%;
+    padding: 0%;
 }
+.Presentation{ 
+   @include GridCenter;
+}
+
+.FunctioningSteps {
+    @include IconeLigne;
+} 
+
+.PresentationLocalization {
+    @include IconeLigne;
+    background-color: $thirdcolorbase;
+    gap: 16px;
+}
+
+.PresentationTxt {
+    background-color: $secondcolorbase;
+}
+
+
