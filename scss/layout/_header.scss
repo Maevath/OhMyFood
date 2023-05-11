@@ -1,9 +1,10 @@
  header {
     display: flex;
     justify-content: center;
-    }
+}
 
-    .imgLogo {
-        padding-top: 30px;
-        padding-bottom: 5px;
-    }
+.Logo{
+    @include TitreShrikhand;
+    font-size: 30px;
+}
+

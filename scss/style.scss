@@ -4,10 +4,6 @@
 @import "./components/buttons";
 @import "./layout/header";
 
-html {
-    margin: 0%;
-    padding: 0%;
-}
 .Presentation{ 
    @include GridCenter;
 }
@@ -26,4 +22,7 @@ html {
     background-color: $secondcolorbase;
 }
 
-
+footer {
+    background-color: $maincolorbase;
+    color: #fff;
+}
