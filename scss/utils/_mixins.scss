@@ -1,6 +1,6 @@
 @mixin GridCenter {
     display: grid;
-    grid-auto-flow: row;
+    
     align-items: center;
     text-align: center;
 }
@@ -30,13 +30,13 @@
 @mixin Roboto518 {
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 @mixin Roboto516 {
     font-family: 'Roboto';
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 @mixin Roboto300 {
