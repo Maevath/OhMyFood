@@ -2,19 +2,25 @@ footer {
     @include Roboto516;
     background-color: $maincolorbase;
     color: #fff;
+    padding: 22px;
 }
 
 .LogoFooter {
-    @include TitreShrikhand;
+    @extend .LogoTitre;
     font-size: 18px;
+    margin: 0%;
     color: white;
 }
 
-ul {
+ul, li{
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 7px;
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #fff;
 }

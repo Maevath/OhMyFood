@@ -1,6 +1,5 @@
 @mixin GridCenter {
     display: grid;
-    
     align-items: center;
     text-align: center;
 }
@@ -15,12 +14,6 @@
 }
 
 // Typo
-
-@mixin TitreShrikhand {
-    font-family: 'Shrikhand';
-    font-weight: 400;
-    font-style: italic;
-}
 
 @mixin Roboto700 {
     font-family: 'Roboto';
