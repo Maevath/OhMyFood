@@ -1,3 +1,30 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Roboto";
   src: url("/assets/fonts/Roboto-Regular.ttf");
@@ -6,7 +33,95 @@
   font-family: "Shrikhand";
   src: url("/assets/fonts/Shrikhand-Regular.ttf");
 }
-button, .bntCommand {
+.Presentation .PresentationLocalization {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #EAEAEA;
+}
+.Presentation .PresentationLocalization .fa-location-dot {
+  font-size: 90%;
+}
+.Presentation .PresentationLocalization h2 {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 17px;
+  margin: 15px;
+}
+.Presentation .PresentationText {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  background-color: #F6F6F6;
+}
+.Presentation .PresentationText h2 {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+  margin: 2em 2em 0 2em;
+}
+.Presentation .PresentationText p {
+  font-family: "Roboto";
+  font-weight: 300;
+  margin: 1em 1em 1em 1em;
+}
+
+.Functioning {
+  margin: 48px 0 68px 0;
+}
+.Functioning .titleSection {
+  margin-bottom: 26px;
+}
+.Functioning .FunctioningArt {
+  display: grid;
+  align-items: center;
+  text-align: center;
+  margin: 20px 20px 20px 32px;
+  grid-gap: 25px;
+}
+.Functioning .FunctioningArt i:hover {
+  color: #9356DC;
+}
+.Functioning .FunctioningArt i {
+  color: #7E7E7E;
+}
+.Functioning .FunctioningArt .FunctioningSteps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background-color: #F6F6F6;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  justify-content: start;
+  padding: 28px 37px;
+  gap: 20px;
+}
+
+.ArtResto {
+  position: relative;
+  margin: 3%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+.ArtResto .ImgResto {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  height: 215px;
+}
+.ArtResto .TextResto {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 17px;
+  margin: 16px 0 0 13px;
+}
+.ArtResto .TextResto p, .ArtResto .TextResto h3 {
+  gap: 5px;
+}
+
+button, .btnCommand {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
@@ -20,7 +135,7 @@ button, .bntCommand {
   height: 50px;
 }
 
-.bntCommand {
+.btnCommand {
   padding: 17px;
 }
 
@@ -47,13 +162,13 @@ footer {
 }
 
 .LogoFooter {
-  font-size: 18px;
   margin: 0%;
+  font-size: 18px;
   color: white;
+  margin-bottom: 16px;
 }
 
 ul, li {
-  list-style-type: none;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -61,82 +176,5 @@ ul, li {
 }
 
 a {
-  text-decoration: none;
   color: #fff;
-}
-
-body {
-  margin: 0;
-}
-
-.ImgResto {
-  width: 100%;
-  border-radius: 15px 15px 0 0;
-  height: 70%;
-}
-
-.ArtResto {
-  height: 251px;
-  margin: 3%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 15px;
-}
-.ArtResto .TxtResto {
-  font-family: "Roboto";
-  font-weight: 300;
-  font-size: 17px;
-  margin: 16px 0 0 13px;
-}
-.ArtResto .TxtResto p, .ArtResto .TxtResto h3 {
-  margin: 0%;
-  gap: 5px;
-}
-
-.Presentation {
-  display: grid;
-  align-items: center;
-  text-align: center;
-}
-.Presentation .PresentationTxt h2 {
-  font-family: "Roboto";
-  font-weight: 700;
-  font-size: 24px;
-  margin: 2em 2em 0 2em;
-}
-.Presentation .PresentationTxt p {
-  font-family: "Roboto";
-  font-weight: 300;
-  margin: 1em 1em 1em 1em;
-}
-
-.FunctioningSteps {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  gap: 27px;
-}
-
-.PresentationLocalization {
-  display: grid;
-  grid-auto-flow: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 16px;
-  gap: 27px;
-  background-color: #EAEAEA;
-  gap: 16px;
-}
-.PresentationLocalization .fa-location-dot {
-  font-size: 90%;
-}
-.PresentationLocalization h2 {
-  font-family: "Roboto";
-  font-weight: 300;
-  font-size: 17px;
-}
-
-.PresentationTxt {
-  background-color: #F6F6F6;
 }/*# sourceMappingURL=style.css.map */

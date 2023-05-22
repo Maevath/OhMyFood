@@ -2,7 +2,7 @@ button {
     @include Roboto516;
     margin: 1em  0 3em 0;
     padding: 13px 18px;
-    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+    background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) ;
     color: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
@@ -10,7 +10,7 @@ button {
     height: 50px;
 }
 
-.bntCommand {
+.btnCommand {
     @extend button;
     padding: 17px;
 }

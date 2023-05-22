@@ -1,75 +1,8 @@
 @import "./utils/variables";
+@import"./base/reset";
 @import "./base/typography";
 @import "./utils/mixins";
+@import "./pages/home";
 @import "./components/buttons";
 @import "./layout/header";
 @import "./layout/footer";
-
-body{
-    margin: 0;
-}
-
-.ImgResto {
-    width: 100%;
-    border-radius: 15px 15px 0 0;
-    height: 70%;
-}
-
-.ArtResto {
-    height: 251px;
-    margin: 3%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
-    
-    .TxtResto {
-        @include Roboto300;
-        font-size: 17px;
-        margin: 16px 0 0 13px;
-
-        p, h3 {
-            margin:0%;
-            gap: 5px;
-        }
-    }
-
-}
-
-.Presentation{ 
-   @include GridCenter;
-
-   .PresentationTxt {
-        h2 {
-            @include Roboto700;
-            font-size: 24px;
-            margin: 2em 2em 0 2em;
-        }
-
-        p{
-            @include Roboto300;
-            margin: 1em 1em 1em 1em;
-        }
-   }
-}
-
-.FunctioningSteps {
-    @include IconeLigne;
-} 
-
-.PresentationLocalization {
-    @include IconeLigne;
-    background-color: $thirdcolorbase;
-    gap: 16px;
-
-    .fa-location-dot{
-        font-size: 90%;
-    }
-
-    h2{
-        @include Roboto300;
-        font-size: 17px;
-    }
-}
-
-.PresentationTxt {
-    background-color: $secondcolorbase;
-}

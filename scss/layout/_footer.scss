@@ -7,13 +7,13 @@ footer {
 
 .LogoFooter {
     @extend .LogoTitre;
-    font-size: 18px;
     margin: 0%;
-    color: white;
+    font-size: 18px;
+    color: white; 
+    margin-bottom: 16px;
 }
 
 ul, li{
-    list-style-type: none;
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -21,6 +21,5 @@ ul, li{
 }
 
 a {
-    text-decoration: none;
     color: #fff;
 }

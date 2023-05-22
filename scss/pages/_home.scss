@@ -1,0 +1,93 @@
+// Section présentation (Barre de localisation + Texte description + bouton)
+.Presentation{ 
+    
+    .PresentationLocalization {
+        @include FlexCenter;
+        background-color: $thirdcolorbase;
+
+        .fa-location-dot{
+            font-size: 90%;
+        }
+
+        h2{
+            @include Roboto300;
+            font-size: 17px;
+            margin: 15px;
+        }    
+    } 
+
+    .PresentationText {
+        @include GridCenter;
+        background-color: $secondcolorbase;
+
+        h2 {
+             @include Roboto700;
+             font-size: 24px;
+             margin: 2em 2em 0 2em;
+         }
+ 
+         p{
+             @include Roboto300;
+             margin: 1em 1em 1em 1em;
+         }
+    }
+}
+
+// Section Fonctionnement 
+.Functioning {  
+    margin: 48px 0 68px 0;
+
+    .titleSection {
+        margin-bottom: 26px;    
+    }
+
+    .FunctioningArt {
+        @include GridCenter;
+        margin: 20px 20px 20px 32px;
+        grid-gap: 25px;
+
+        i:hover {
+                color: $maincolor;
+            }
+
+        i {
+            color: #7E7E7E;  
+        }
+
+        .FunctioningSteps {
+            @include FlexCenter;
+            background-color: $secondcolorbase;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            border-radius: 16px;
+            justify-content: start;
+            padding: 28px 37px;
+            gap: 20px;
+        } 
+    }
+}
+
+// Section comprenant les articles de presentation des restaurant
+.ArtResto {
+    position: relative;
+    margin: 3%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    
+    .ImgResto {
+        max-width: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+        height: 215px;
+    }
+
+    .TextResto {
+        @include Roboto300;
+        font-size: 17px;
+        margin: 16px 0 0 13px;
+
+        p, h3 {
+            gap: 5px;
+        }
+    }
+
+}
