@@ -1,16 +1,16 @@
 button {
-    @include Roboto516;
-    margin: 1em  0 3em 0;
+    @extend %Roboto518;
+    height: 50px;
+    margin: 1em 3em;
     padding: 13px 18px;
     background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%) ;
     color: #fff;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     border: none;
-    height: 50px;
 }
 
 .btnCommand {
-    @extend button;
+    @extend %Roboto516;
     padding: 17px;
 }

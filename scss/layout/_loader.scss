@@ -1,0 +1,182 @@
+.Loader, .BackgroundLoader{
+    animation-name: fadeOut;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+
+.Loader {
+    z-index: 10000;
+    display:grid;
+    grid-template-rows:1fr 1fr;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .LoaderElement {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin-bottom: -200px;
+
+        .LoaderC {
+            position: absolute;
+            border: 10px solid $maincolor;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border-right-color: transparent;
+        }
+        
+        .LoaderO {
+            position: absolute;
+            border: 10px solid $maincolor;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border-left-color: transparent;
+            animation: spin-purple 1.3s linear infinite;
+        }
+        
+        .CercleIntern {
+            position: absolute;
+            border: 2px solid transparent;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border-top-color:$thirdcolorbase;
+            border-bottom-color: $thirdcolorbase;
+            animation: spin-rigth 3s linear infinite;
+        }
+        
+        .CercleCenter {
+            position: absolute;
+            border: 2px solid transparent;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border-top-color:$thirdcolorbase;
+            border-bottom-color: $thirdcolorbase;
+            animation: spin-left 3s linear infinite;
+        }
+        
+        .CercleExtern {
+            position: absolute;
+            border: 2px solid transparent;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border-top-color:$thirdcolorbase;
+            border-bottom-color: $thirdcolorbase;
+            animation: spin-rigth 3s linear infinite;
+        }
+    }
+}
+
+
+
+
+.BackgroundLoader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $maincolorbase;
+    opacity: 0.95;
+    z-index: 9999;
+    
+}
+
+.TextCharge {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        @extend .LogoTitre;
+        font-size: 25px;
+        letter-spacing: 2px;
+        color: $thirdcolorbase;
+    }
+}
+
+
+
+
+// body {
+//     background-color: rgba(255,255,255,0.4);
+// }
+
+// .section2, .section1 {
+//     position: absolute;
+// }
+
+// .TextCharge{
+//     @extend .LogoTitre;
+//   }
+  
+//   section {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     height: 100vh;
+//   }
+  
+//   .LoaderOC1 {
+//     position: absolute;
+//     border: 10px solid #9356dc;
+//     width: 13px;
+//     height: 13px;
+//     border-radius: 50%;
+//     border-right-color: transparent;
+//   }
+  
+//   .LoaderOC2 {
+//     position: absolute;
+//     border: 10px solid #9356dc;
+//     width: 13px;
+//     height: 13px;
+//     border-radius: 50%;
+//     border-right-color: transparent;
+//     animation: spin 2s linear infinite;
+//   }
+  
+//   .LoaderOC3 {
+//     position: absolute;
+//     border: 2px solid transparent;
+//     width: 80px;
+//     height: 80px;
+//     border-radius: 50%;
+//     border-right-color: rgba(255,255,255,0.5);
+//     border-left-color: rgba(255,255,255,0.5);
+//     animation: spinO 3s linear infinite;
+//   }
+  
+//   .LoaderOC32 {
+//     position: absolute;
+//     border: 2px solid transparent;
+//     width: 60px;
+//     height: 60px;
+//     border-radius: 50%;
+//     border-top-color: rgba(255,255,255,0.3);
+//     border-bOttom-color: rgba(255,255,255,0.3);
+//     animation: spinO 3s linear infinite;
+//   }
+//   .LoaderOC31 {
+//     position: absolute;
+//     displat: block;
+//     border: 2px solid transparent;
+//     width: 70px;
+//     height: 70px;
+//     border-radius: 50%;
+//     border-top-color: rgba(255,255,255,0.4);
+//     border-bOttom-color: rgba(255,255,255,0.4);
+//     animation: spinO1 3s linear infinite;
+//   }
+  
+ 

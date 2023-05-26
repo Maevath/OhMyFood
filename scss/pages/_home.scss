@@ -1,3 +1,8 @@
+// Génèral
+.TitleSection {
+    @extend %Roboto724;
+}
+
 // Section présentation (Barre de localisation + Texte description + bouton)
 .Presentation{ 
     
@@ -10,8 +15,7 @@
         }
 
         h2{
-            @include Roboto300;
-            font-size: 17px;
+            @extend %Roboto317;
             margin: 15px;
         }    
     } 
@@ -21,13 +25,12 @@
         background-color: $secondcolorbase;
 
         h2 {
-             @include Roboto700;
-             font-size: 24px;
              margin: 2em 2em 0 2em;
          }
  
          p{
-             @include Roboto300;
+            @extend %Roboto318;
+            font-size: 18px;
              margin: 1em 1em 1em 1em;
          }
     }
@@ -36,10 +39,6 @@
 // Section Fonctionnement 
 .Functioning {  
     margin: 48px 0 68px 0;
-
-    .titleSection {
-        margin-bottom: 26px;    
-    }
 
     .FunctioningArt {
         @include GridCenter;
@@ -56,38 +55,77 @@
 
         .FunctioningSteps {
             @include FlexCenter;
+            @extend %Roboto516;
             background-color: $secondcolorbase;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
             border-radius: 16px;
             justify-content: start;
-            padding: 28px 37px;
+            padding:  7% 8%;
             gap: 20px;
         } 
     }
 }
 
 // Section comprenant les articles de presentation des restaurant
-.ArtResto {
+.ArtGroup {
     position: relative;
-    margin: 3%;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 15px;
+
+    .ArtResto {
+        margin: 5%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
     
-    .ImgResto {
-        max-width: 100%;
-        object-fit: cover;
-        border-radius: 15px 15px 0 0;
-        height: 215px;
-    }
+        .ImgResto {
+            max-width: 100%;
+            height: 100%;
+            overflow: hidden;
+            object-fit: cover;
+            border-radius: 15px 15px 0 0;
+            
+        }
+        .InfoResto {
 
-    .TextResto {
-        @include Roboto300;
-        font-size: 17px;
-        margin: 16px 0 0 13px;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
 
-        p, h3 {
-            gap: 5px;
+
+            .TextResto {
+            @extend %Roboto317;
+            font-size: 17px;
+            margin: 16px 0 0 13px;
+
+                p, h3 {
+                    gap: 5px;
+                }
+            }
+
+            .LikeResto {
+                position: relative;
+                padding: 0 1rem;
+
+                    i, svg {
+                        cursor: pointer;
+                        font-size: 2rem;
+
+                        &.fa-solid {
+                            transition: transform 0.6s;
+                            // transform: scale(0);
+                            position: absolute;
+                            top: 0.25rem;
+                            left: 0.25rem;
+                        }
+                    }
+
+                    &:hover {
+                        i, svg {
+                            &.fa-solid {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+
+            }
         }
     }
-
 }

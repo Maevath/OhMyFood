@@ -1,5 +1,5 @@
 footer {
-    @include Roboto516;
+    @extend %Roboto516;
     background-color: $maincolorbase;
     color: #fff;
     padding: 22px;
