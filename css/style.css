@@ -205,11 +205,15 @@ button {
   cursor: pointer;
   font-size: 2rem;
 }
+.ArtGroup .ArtResto .InfoResto .LikeResto i.fa-regular, .ArtGroup .ArtResto .InfoResto .LikeResto svg.fa-regular {
+  transform: translate(-10%, 10%);
+}
 .ArtGroup .ArtResto .InfoResto .LikeResto i.fa-solid, .ArtGroup .ArtResto .InfoResto .LikeResto svg.fa-solid {
   transition: transform 0.6s;
   position: absolute;
   top: 0.25rem;
   left: 0.25rem;
+  transform: translate(-10%, -10%);
 }
 .ArtGroup .ArtResto .InfoResto .LikeResto:hover i.fa-solid, .ArtGroup .ArtResto .InfoResto .LikeResto:hover svg.fa-solid {
   transform: scale(1);

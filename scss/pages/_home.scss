@@ -103,17 +103,22 @@
             .LikeResto {
                 position: relative;
                 padding: 0 1rem;
+                
 
                     i, svg {
                         cursor: pointer;
                         font-size: 2rem;
 
+                        &.fa-regular{
+                            transform: translate(-10%, 10%);
+                        }
                         &.fa-solid {
                             transition: transform 0.6s;
                             // transform: scale(0);
                             position: absolute;
                             top: 0.25rem;
                             left: 0.25rem;
+                            transform: translate(-10%, -10%);
                         }
                     }
 
