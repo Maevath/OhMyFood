@@ -40,13 +40,13 @@ a {
   margin: 0 0 26px 20px;
 }
 
-footer, .btnCommand, .Functioning .FunctioningArt .FunctioningSteps {
+.ImgBackground .Dish, footer, .btnCommand, .Functioning .FunctioningArt .FunctioningSteps {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
 }
 
-button {
+.ImgBackground .Dish h3, button {
   font-family: "Roboto";
   font-weight: 500;
   font-size: 18px;
@@ -62,6 +62,12 @@ button {
   font-family: "Roboto";
   font-weight: 300;
   font-size: 17px;
+}
+
+.ImgBackground .Dish p, .ImgBackground h2 {
+  font-family: "Roboto";
+  font-weight: 300;
+  font-size: 16px;
 }
 
 @keyframes spin-rigth {
@@ -103,15 +109,9 @@ button {
     transform: rotate(360deg);
   }
 }
-@keyframes fadeOut {
-  0% {
-    opacity: 0.9;
-  }
-  90% {
-    opacity: 0.9;
-  }
-  100% {
-    opacity: 0;
+@keyframes disappear {
+  to {
+    visibility: hidden;
   }
 }
 .Presentation .PresentationLocalization {
@@ -170,6 +170,30 @@ button {
   gap: 20px;
 }
 
+.ListNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  width: 100%;
+  position: absolute;
+  transform: scale(1);
+  transform: translate(-57%);
+}
+.ListNumber .ListCercle {
+  position: absolute;
+  background-color: #9356DC;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+}
+.ListNumber .Number {
+  position: absolute;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
 .ArtGroup {
   position: relative;
 }
@@ -179,9 +203,8 @@ button {
   border-radius: 15px;
 }
 .ArtGroup .ArtResto .ImgResto {
-  max-width: 100%;
-  height: 100%;
-  overflow: hidden;
+  width: 100%;
+  height: 170px;
   object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
@@ -192,7 +215,7 @@ button {
 }
 .ArtGroup .ArtResto .InfoResto .TextResto {
   font-size: 17px;
-  margin: 16px 0 0 13px;
+  margin: 16px 13px 12px;
 }
 .ArtGroup .ArtResto .InfoResto .TextResto p, .ArtGroup .ArtResto .InfoResto .TextResto h3 {
   gap: 5px;
@@ -200,23 +223,26 @@ button {
 .ArtGroup .ArtResto .InfoResto .LikeResto {
   position: relative;
   padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
 }
 .ArtGroup .ArtResto .InfoResto .LikeResto i, .ArtGroup .ArtResto .InfoResto .LikeResto svg {
   cursor: pointer;
-  font-size: 2rem;
-}
-.ArtGroup .ArtResto .InfoResto .LikeResto i.fa-regular, .ArtGroup .ArtResto .InfoResto .LikeResto svg.fa-regular {
-  transform: translate(-10%, 10%);
+  font-size: 1.5rem;
 }
 .ArtGroup .ArtResto .InfoResto .LikeResto i.fa-solid, .ArtGroup .ArtResto .InfoResto .LikeResto svg.fa-solid {
   transition: transform 0.6s;
+  transform: scale(0);
   position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-  transform: translate(-10%, -10%);
+  font-size: 1.6rem;
 }
 .ArtGroup .ArtResto .InfoResto .LikeResto:hover i.fa-solid, .ArtGroup .ArtResto .InfoResto .LikeResto:hover svg.fa-solid {
   transform: scale(1);
+  background-image: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 button {
@@ -240,7 +266,7 @@ header {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
-.LogoTitre, .TextCharge h2, .LogoFooter {
+.LogoTitre, .ImgBackground .TitreResto, .Loader .TextCharge h2, .LogoFooter {
   font-family: "Shrikhand";
   font-weight: 400;
   margin: 3% 0 1%;
@@ -272,9 +298,10 @@ a {
 }
 
 .Loader, .BackgroundLoader {
-  animation-name: fadeOut;
-  animation-duration: 3s;
+  visibility: visible;
+  animation: disappear 0s;
   animation-fill-mode: forwards;
+  animation-delay: 3s;
 }
 
 .Loader {
@@ -342,6 +369,19 @@ a {
   border-bottom-color: #EAEAEA;
   animation: spin-rigth 3s linear infinite;
 }
+.Loader .TextCharge {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Loader .TextCharge h2 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: #EAEAEA;
+}
 
 .BackgroundLoader {
   position: fixed;
@@ -352,16 +392,47 @@ a {
   z-index: 9999;
 }
 
-.TextCharge {
+.ImgBackground {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  background-image: url("/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.ImgBackground .Menu {
+  max-width: 100%;
+  margin-top: 50%;
+  padding: 2rem 1rem 0;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0px 0px;
+}
+.ImgBackground .Menu div {
+  margin-bottom: 3rem;
+}
+.ImgBackground .Dish {
+  position: relative;
+  background-color: #FFF;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  justify-content: start;
+  padding: 3%;
+  margin: 12px 13px;
+  display: flex;
+  flex-direction: column;
+  align-content: end;
+}
+.ImgBackground .Dish .PriceContainer {
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
   width: 100%;
   height: 100%;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-.TextCharge h2 {
-  font-size: 25px;
-  letter-spacing: 2px;
-  color: #EAEAEA;
+.ImgBackground .Dish p.Price {
+  position: absolute;
+  justify-content: center;
+  font-weight: 700;
+  margin: 25px;
 }/*# sourceMappingURL=style.css.map */

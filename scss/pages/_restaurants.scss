@@ -1,0 +1,72 @@
+
+.ImgBackground{
+    position: absolute;
+    width: 100%;
+    height: 230px;
+    background-image: url('/assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+
+    .TitreResto {
+       @extend .LogoTitre;
+    }
+
+    h2{
+        @extend %Roboto316;
+    }
+
+    .Menu {
+        max-width: 100%;
+        margin-top: 50%;
+        padding: 2rem 1rem 0;
+        background-color: $secondcolorbase;
+        border-radius: 40px 40px 0px 0px;
+
+        div{
+            margin-bottom: 3rem;
+        }
+    }
+
+    .Dish {
+        position: relative;
+        @extend %Roboto516;
+        background-color: #FFF;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+        border-radius: 15px;
+        justify-content: start;
+        padding: 3%;
+        margin: 12px 13px;
+        display: flex;
+        flex-direction: column;
+        align-content: end;
+        
+
+        .PriceContainer {
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+            width: 100%;
+            height: 100%;
+        }
+
+        h3 {
+            @extend %Roboto518;
+        }
+
+        p {
+            @extend %Roboto316;
+            
+            &.Price {
+                position: absolute;
+                justify-content: center;
+                font-weight: 700;
+                margin: 25px;
+            }   
+        }
+    }
+}
+   
+
+
+

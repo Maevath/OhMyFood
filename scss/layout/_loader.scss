@@ -1,7 +1,8 @@
 .Loader, .BackgroundLoader{
-    animation-name: fadeOut;
-    animation-duration: 3s;
+    visibility: visible;
+    animation: disappear 0s;
     animation-fill-mode: forwards;
+    animation-delay: 3s;
   }
 
 .Loader {
@@ -74,10 +75,23 @@
             animation: spin-rigth 3s linear infinite;
         }
     }
+
+    .TextCharge {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        h2 {
+            @extend .LogoTitre;
+            font-size: 25px;
+            letter-spacing: 2px;
+            color: $thirdcolorbase;
+        }
+    }
 }
-
-
-
 
 .BackgroundLoader {
     position: fixed;
@@ -88,95 +102,3 @@
     z-index: 9999;
     
 }
-
-.TextCharge {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    h2 {
-        @extend .LogoTitre;
-        font-size: 25px;
-        letter-spacing: 2px;
-        color: $thirdcolorbase;
-    }
-}
-
-
-
-
-// body {
-//     background-color: rgba(255,255,255,0.4);
-// }
-
-// .section2, .section1 {
-//     position: absolute;
-// }
-
-// .TextCharge{
-//     @extend .LogoTitre;
-//   }
-  
-//   section {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     height: 100vh;
-//   }
-  
-//   .LoaderOC1 {
-//     position: absolute;
-//     border: 10px solid #9356dc;
-//     width: 13px;
-//     height: 13px;
-//     border-radius: 50%;
-//     border-right-color: transparent;
-//   }
-  
-//   .LoaderOC2 {
-//     position: absolute;
-//     border: 10px solid #9356dc;
-//     width: 13px;
-//     height: 13px;
-//     border-radius: 50%;
-//     border-right-color: transparent;
-//     animation: spin 2s linear infinite;
-//   }
-  
-//   .LoaderOC3 {
-//     position: absolute;
-//     border: 2px solid transparent;
-//     width: 80px;
-//     height: 80px;
-//     border-radius: 50%;
-//     border-right-color: rgba(255,255,255,0.5);
-//     border-left-color: rgba(255,255,255,0.5);
-//     animation: spinO 3s linear infinite;
-//   }
-  
-//   .LoaderOC32 {
-//     position: absolute;
-//     border: 2px solid transparent;
-//     width: 60px;
-//     height: 60px;
-//     border-radius: 50%;
-//     border-top-color: rgba(255,255,255,0.3);
-//     border-bOttom-color: rgba(255,255,255,0.3);
-//     animation: spinO 3s linear infinite;
-//   }
-//   .LoaderOC31 {
-//     position: absolute;
-//     displat: block;
-//     border: 2px solid transparent;
-//     width: 70px;
-//     height: 70px;
-//     border-radius: 50%;
-//     border-top-color: rgba(255,255,255,0.4);
-//     border-bOttom-color: rgba(255,255,255,0.4);
-//     animation: spinO1 3s linear infinite;
-//   }
-  
- 

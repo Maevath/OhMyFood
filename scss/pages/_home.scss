@@ -62,10 +62,37 @@
             justify-content: start;
             padding:  7% 8%;
             gap: 20px;
+
+            
+            
         } 
     }
 }
+.ListNumber{
+                @include FlexCenter;
+                width: 100%;
+                position: absolute;
+                transform: scale(1);
+                transform: translate(-57%);
+                
 
+            .ListCercle {
+                position: absolute;
+                background-color: $maincolor;
+                width: 27px;
+                height: 27px;
+                border-radius: 50%;
+                
+
+            }
+
+            .Number{
+                position: absolute;
+                color: #fff;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            }
 // Section comprenant les articles de presentation des restaurant
 .ArtGroup {
     position: relative;
@@ -76,15 +103,14 @@
         border-radius: 15px;
     
         .ImgResto {
-            max-width: 100%;
-            height: 100%;
-            overflow: hidden;
+            width: 100%;
+            height: 170px;
             object-fit: cover;
             border-radius: 15px 15px 0 0;
             
         }
-        .InfoResto {
 
+        .InfoResto {
             display:flex;
             align-items: center;
             justify-content: space-between;
@@ -93,7 +119,7 @@
             .TextResto {
             @extend %Roboto317;
             font-size: 17px;
-            margin: 16px 0 0 13px;
+            margin: 16px 13px 12px;
 
                 p, h3 {
                     gap: 5px;
@@ -103,29 +129,28 @@
             .LikeResto {
                 position: relative;
                 padding: 0 1rem;
+                @include FlexCenter;
                 
 
                     i, svg {
                         cursor: pointer;
-                        font-size: 2rem;
+                        font-size: 1.5rem;
 
-                        &.fa-regular{
-                            transform: translate(-10%, 10%);
-                        }
                         &.fa-solid {
                             transition: transform 0.6s;
-                            // transform: scale(0);
+                            transform: scale(0);
                             position: absolute;
-                            top: 0.25rem;
-                            left: 0.25rem;
-                            transform: translate(-10%, -10%);
+                            font-size: 1.6rem;
                         }
                     }
 
-                    &:hover {
+                    &:hover{
                         i, svg {
                             &.fa-solid {
                                 transform: scale(1);
+                                background-image: $degrade;
+                                -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
                             }
                         }
                     }
