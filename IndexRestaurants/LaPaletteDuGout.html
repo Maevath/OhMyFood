@@ -5,87 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/b37565a937.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Ohmyfood - La palette du goût</title>
 </head>
 
 <body>
-
     <header>
-        <h1 class="Logo">Ohmyfood</h1> 
+        <a href="/index.html">
+            <h1 class="LogoTitre">Ohmyfood</h1>
+        </a> 
     </header>
-
     <main>
-        <section>
-            <img src="/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo du restaurant La palette du goût">
-        </section>
-        <section>
-            <div>
-                <h2>Entrées</h2>
-                <arcticle>
+        <img class="ImgBackground" src="/assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+        <section class="Menu">
+            <div class="LikeTitle">
+            <h3 class="TitleResto">La palette du goût</h3>
+                <div class="LikeResto">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+            
+            <div class="MenuDish">
+                <h2 class="TitleMenu">ENTRÉES</h2>
+                <article class="Dish">
+                    <h3>Ravioles de foie gras</h3>
+                    <p>Accompagnées de leur crème à la truffe</p>
+                    <div class="PriceContainer">
+                        <p class="Price">25€</p>
+                    </div>
+                </article>
+
+                <article class="Dish">
                     <h3>Fricassée d'escargots</h3>
                     <p>Au piment d'Espelette</p>
-                    <p>25€</p>
-                </arcticle>
+                    <div class="PriceContainer">
+                        <p class="Price">35€</p>
+                    </div>
+                </article>
 
-                <arcticle>
-                    <h3>Foie gras de canard mi-cuit</h3>
-                    <p>Et ses copeaux de truffe noire</p>
-                    <p>35€</p>
-                </arcticle>
-
-                <arcticle>
+                <article class="Dish">
                     <h3>Œuf au plat</h3>
                     <p>Assaisonné à la truffe sur lit de caviar</p>
-                    <p>20€</p>
-                </arcticle>
+                    <div class="PriceContainer">
+                        <p class="Price">20€</p>
+                    </div>
+                </article>
             </div>
-            <div>
-                <h2>Plats</h2>
-                <arcticle>
+            <div class="MenuDish">
+                <h2 class="TitleMenu">PLATS</h2>
+                <article class="Dish">
                     <h3>Filet de bœuf aux herbes</h3>
                     <p>Accompagné de sa ribambelle de légumes</p>
-                    <p>40€</p>
-                </arcticle>
+                    <div class="PriceContainer">
+                        <p class="Price">40€</p>
+                    </div>
+                </article>
 
-                <arcticle>
+                <article class="Dish">
                     <h3>Parmentier de queue de bœuf</h3>
                     <p>À la truffe noire sur sa purée de panais</p>
-                    <p>35€</p>
-                </arcticle>
+                    <div class="PriceContainer">
+                        <p class="Price">35€</p>
+                    </div>
+                </article>
 
-                <arcticle>
+                <article class="Dish">
                     <h3>Filet de turbot</h3>
                     <p>Aux agrumes</p>
-                    <p>44€</p>
-                </arcticle>
+                    <div class="PriceContainer">
+                        <p class="Price">44€</p>
+                    </div>
+                </article>
             </div>
-            <div>
-                <h2>Desserts</h2>
-                <arcticle>
+            <div class="MenuDish">
+                <h2 class="TitleMenu">DESSERTS</h2>
+                <article class="Dish">
                     <h3>Paris-Brest</h3>
                     <p>Revisité</p>
-                    <p>18€</p>
-                </arcticle>
+                    <div class="PriceContainer">
+                        <p class="Price">18€</p>
+                    </div>
+                </article>
 
-                <arcticle>
+                <article class="Dish">
                     <h3>Macaron au chocolat d'exception </h3>
                     <p>Et glace à la vanille de Madagascar</p>
-                    <p>22€</p>
-                </arcticle>
+                    <div class="PriceContainer">
+                        <p class="Price">22€</p>
+                    </div>
+                </article>
 
-                <arcticle>
+                <article class="Dish"> 
                     <h3>Mousse au chocolat </h3>
                     <p>Au piment d'Espelette et à la truffe noire</p>
-                    <p>23€</p>
-                </arcticle>
+                    <div class="PriceContainer">
+                        <p class="Price">23€</p>
+                    </div>
+                </article>
             </div>
-            <div>
-            <button>Commander</button>
+            <div class="btnContent">
+                <button class="btnCommand">Commander</button>
             </div>
         </section>
     </main>
-
     <footer>
         <h2 class="LogoFooter">Ohmyfood</h2>
         <ul>
