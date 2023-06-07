@@ -55,6 +55,7 @@
 .Functioning {  
     margin: 48px 0 68px 0;
 
+
     .FunctioningArt {
         @include GridCenter;
         margin: 20px 20px 20px 32px;
@@ -76,6 +77,11 @@
             border-radius: 1rem;
             justify-content: start;
             gap: 20px;
+            cursor: pointer;
+
+            &:hover{
+                box-shadow: 0rem 0.1rem 1rem $maincolor;
+            }
 
             .function-text{
                 @include FlexCenter;
@@ -84,6 +90,13 @@
             }
             
         } 
+
+        
+
+        .FunctioningSteps:hover .fa-mobile-screen,.FunctioningSteps:hover .fa-list-ul,.FunctioningSteps:hover .fa-store{
+            color: $maincolor;
+            
+        }
     }
 }
 

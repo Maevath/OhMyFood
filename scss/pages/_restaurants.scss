@@ -43,6 +43,7 @@
         cursor: pointer;
         max-width: 100%;
         overflow: hidden;
+        animation: slideInFromRight 1s ease-out;
         
         .dish-text{
             width: 100%;
