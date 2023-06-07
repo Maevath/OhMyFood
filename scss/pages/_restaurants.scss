@@ -1,17 +1,8 @@
-    .TitleResto {
-       @extend .LogoTitre;
-       font-size: 28px;
-    }
-
-    .TitleMenu {
-        @extend %Roboto316;
-    }
-
 .ImgBackground{
     width: 100%;
     height: 230px;
     margin-bottom: -3rem;
-    
+    object-fit: cover;
 }
 
     .Menu {
@@ -23,6 +14,10 @@
 
         .MenuDish{
             margin-bottom: 3rem;
+
+            .TitleMenu {
+                @extend %Roboto316;
+            }
         }
     }
 
@@ -30,6 +25,7 @@
         height: 5px;
         width: 10%;
         background-color: $thirdcolor;
+        margin: 12px 0;
         
     }
 
@@ -39,39 +35,82 @@
         background-color: #FFF;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
         border-radius: 15px;
-        justify-content: start;
-        padding: 3%;
+        justify-content: start;        
         margin: 12px 13px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-content: end;
+        cursor: pointer;
+        max-width: 100%;
+        overflow: hidden;
         
-
-        .PriceContainer {
-            position: absolute;
-            display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
+        .dish-text{
             width: 100%;
-            height: 100%;
-        }
+            padding: 1rem;
+            overflow: hidden;
+                
 
-        h3 {
-            @extend %Roboto518;
-        }
-
-        p {
-            @extend %Roboto316;
-            font-size: 15px;
-            
-            &.Price {
-                position: absolute;
-                justify-content: center;
+            h3 {
+                @extend %Roboto518;
                 font-weight: 700;
-                margin: 25px;
-            }   
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            p{
+                width: auto;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+        
+        .Price{
+            display: flex;
+            align-items: end;
+            padding: 1rem 2rem 1rem 0;
+             @extend %Roboto316;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+    
+
+        .check {
+            width: 6rem;
+            margin-right: -6rem;
+            max-height: 100%;
+            background-color: $thirdcolor;
+
+            .fa-circle-check{
+                height: 100%;
+                color: #FFF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.5rem;@keyframes stayVisible {
+                  0% { opacity: 1; }
+                  100% { opacity: 1; }
+                }
+            }  
         }
     }
+
+    .Dish:hover .check  {
+                margin-right: 0;
+                transition: all 0.5s;
+                animation-duration: 5s;
+                
+                
+                .fa-circle-check{
+                    animation: valid 0.7s linear;
+                }
+            } 
+             
+        
+
+
+
 
     .LikeTitle {
         margin-bottom: 2rem;
@@ -81,6 +120,9 @@
 
         .TitleResto{
         width: 100%;
+        font-family: 'Shrikhand';
+        font-weight: 400;
+        font-size: 28px;
         }
 
         .LikeResto{
