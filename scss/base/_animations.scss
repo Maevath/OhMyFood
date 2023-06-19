@@ -1,7 +1,7 @@
+// ///////////////////////////////////////// //
+// ///////////////////LOADER//////////////// //
 
-// ///////////////////LOADER///////////////////
-
-// Animation des cercles en rotation "CercleIntern" "CercleCenter" "CercleExtern" (ficher: _loader.scss)
+// Animation des cercles en rotation "cercle-intern" "cercle-center" "cercle-extern" (ficher: _loader.scss) //
 @keyframes spin-rigth {
   0% {
     transform: rotate(0deg)scale(1);
@@ -15,6 +15,7 @@
     transform:rotate(0deg) scale(1);
   }
 }
+
 @keyframes spin-left {
   0% {
     transform: rotate(0deg)scale(1);
@@ -29,7 +30,7 @@
   }
 }
 
-// Animation de "LoaderO" (ficher: _loader.scss)
+// Animation de "loader-o" (ficher: _loader.scss) //
 @keyframes spin-purple {
     0% {
       transform: rotate(0deg);
@@ -52,15 +53,14 @@
     }
   }
 
-// Disparition des élèments: "Loader" et du "BackgroundLoader" (ficher: _loader.scss)
+// Disparition des élèments: "loader" et du "background-loader" (ficher: _loader.scss) //
 
 @keyframes disappear {
   to { visibility: hidden; }
 }
 
-// //////////////////////////////////////////// 
-
-// ////////////////CHECK///////////////////////
+// ///////////////////////////////////////// // 
+// ////////////////CHECK//////////////////// //
 
 @keyframes valid {
       0% {
@@ -72,36 +72,42 @@
   }
 }
 
-// //////////////////////////////////////////// 
-
-// ////////////////DISH////////////////////////
+// ///////////////////////////////////////// // 
+// ////////////////DISH///////////////////// //
 
 @keyframes slideInFromRight {
   0% {
     transform: translateX(100%);
+    opacity: 0;
   }
 
   25% {
     transform: translateX(100%);
+    opacity: 0;
   }
   
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
-.MenuDish .Dish {
-  animation: slideInFromRight 1s ease-out;
-}
-
-.MenuDish .Dish:nth-of-type(1) {
+/////////////////////////////////////////// //
+// Apparition des assiettes dans le menu par type (fichier:_restaurants.scss)//
+.menu-dish .dish:nth-of-type(1) {
   animation-delay: 0s;
 }
 
-.MenuDish .Dish:nth-of-type(2) {
+.menu-dish .dish:nth-of-type(2) {
   animation-delay: 0.5s;
 }
 
-.MenuDish .Dish:nth-of-type(3) {
+.menu-dish .dish:nth-of-type(3) {
   animation-delay: 1s;
-}//////////////////////////////////////////// 
+}
+
+.menu-dish .dish:nth-of-type(4) {
+  animation-delay: 1.5s;
+}
+
+//////////////////////////////////////////// 

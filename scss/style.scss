@@ -1,11 +1,16 @@
 @import "./utils/variables";
+@import "./utils/mixins";
 @import "./base/reset";
 @import "./base/typography";
 @import "./base/animations";
-@import "./utils/mixins";
 @import "./pages/home";
+@import "./pages/restaurants";
 @import "./components/buttons";
 @import "./layout/header";
 @import "./layout/footer";
 @import "./layout/loader";
-@import "./pages/restaurants";
+
+
+
+
+

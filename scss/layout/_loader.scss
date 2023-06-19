@@ -1,11 +1,11 @@
-.Loader, .BackgroundLoader{
+.loader, .background-loader{
     visibility: visible;
     animation: disappear 0s;
     animation-fill-mode: forwards;
     animation-delay: 3s;
   }
 
-.Loader {
+.loader {
     z-index: 10000;
     display:grid;
     grid-template-rows:1fr 1fr;
@@ -15,7 +15,8 @@
     width: 100%;
     height: 100%;
 
-    .LoaderElement {
+    // C et O violet & les 3 cercles //
+    .loader-element {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -23,7 +24,8 @@
         height: 100%;
         margin-bottom: -200px;
 
-        .LoaderC {
+        // C et O violet //
+        .loader-c {
             position: absolute;
             border: 10px solid $maincolor;
             width: 20px;
@@ -32,7 +34,7 @@
             border-right-color: transparent;
         }
         
-        .LoaderO {
+        .loader-o {
             position: absolute;
             border: 10px solid $maincolor;
             width: 20px;
@@ -42,7 +44,8 @@
             animation: spin-purple 1.3s linear infinite;
         }
         
-        .CercleIntern {
+        // les 3 cercles //
+        .cercle-intern {
             position: absolute;
             border: 2px solid transparent;
             width: 60px;
@@ -53,7 +56,7 @@
             animation: spin-rigth 3s linear infinite;
         }
         
-        .CercleCenter {
+        .cercle-center {
             position: absolute;
             border: 2px solid transparent;
             width: 70px;
@@ -64,7 +67,7 @@
             animation: spin-left 3s linear infinite;
         }
         
-        .CercleExtern {
+        .cercle-extern {
             position: absolute;
             border: 2px solid transparent;
             width: 80px;
@@ -76,7 +79,8 @@
         }
     }
 
-    .TextCharge {
+    // texte "Chargement..."
+    .text-charge {
         width: 100%;
         height: 100%;
         position: fixed;
@@ -85,15 +89,16 @@
         align-items: center;
     
         h2 {
-            @extend .LogoTitre;
-            font-size: 25px;
+            font-family: 'Shrikhand';
+            font-weight: 400; 
+            font-size: 1.5rem;
             letter-spacing: 2px;
             color: $thirdcolorbase;
         }
     }
 }
 
-.BackgroundLoader {
+.background-loader {
     position: fixed;
     width: 100%;
     height: 100%;

@@ -1,160 +1,174 @@
-.ImgBackground{
+
+.img-background{
     width: 100%;
     height: 230px;
     margin-bottom: -3rem;
     object-fit: cover;
 }
 
-    .Menu {
+//Titre et Like
+.like-title {
+    margin-bottom: 2rem;
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+
+    //Titre de la page
+    .title-resto{
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 28px;
+    }
+    
+    //Le coeur
+    .like-resto {
         position: relative;
-        max-width: 100%;
-        padding: 2rem 1rem 3rem;
-        background-color: $secondcolorbase;
-        border-radius: 40px 40px 0px 0px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
 
-        .MenuDish{
-            margin-bottom: 3rem;
+        
+        i, svg {
+            cursor: pointer;
+            font-size: 1.5rem;
 
-            .TitleMenu {
-                @extend %Roboto316;
+            &.fa-solid {
+                transition: transform 0.6s;
+                transform: scale(0);
+                position: absolute;
+                font-size: 1.6rem;
             }
         }
-    }
-
-    .GreenBarre {
-        height: 5px;
-        width: 10%;
-        background-color: $thirdcolor;
-        margin: 12px 0;
         
-    }
+        &:hover{
+            i, svg {
+                &.fa-solid {
+                    transform: scale(1);
+                    background-image: $degrade;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                }
+            }
+        }
+    }    
+}
 
-    .Dish {
-        position: relative;
-        @extend %Roboto516;
-        background-color: #FFF;
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-        border-radius: 15px;
-        justify-content: start;        
-        margin: 12px 13px;
-        display: flex;
-        flex-direction: row;
-        align-content: end;
-        cursor: pointer;
-        max-width: 100%;
+//Section du Menu
+.menu {
+    position: relative;
+    max-width: 100%;
+    padding: 2rem 1rem 3rem;
+    background-color: $secondcolorbase;
+    border-radius: 40px 40px 0px 0px;
+
+    .menu-dish{
+        margin-bottom: 3rem;
+
+        .title-menu {
+            @extend %Roboto316;
+            margin: 13px;
+        }
+    }
+}
+
+.green-barre {
+    height: 5px;
+    width: 10%;
+    background-color: $thirdcolor;
+    margin: 12px 13px;   
+}
+
+//Articles comprenant les assiettes
+.dish {
+    position: relative;
+    @extend %Roboto516;
+    background-color: #FFF;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    justify-content: start;        
+    margin: 12px 13px;
+    display: flex;
+    flex-direction: row;
+    align-content: end;
+    cursor: pointer;
+    max-width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    animation: slideInFromRight 1s ease-out forwards;
+        
+    .dish-text{
+        width: 100%;
+        padding: 1rem;
         overflow: hidden;
-        animation: slideInFromRight 1s ease-out;
-        
-        .dish-text{
-            width: 100%;
-            padding: 1rem;
-            overflow: hidden;
                 
 
-            h3 {
-                @extend %Roboto518;
-                font-weight: 700;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-
-            p{
-                width: auto;
-                white-space: nowrap;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-        }
-        
-        .Price{
-            display: flex;
-            align-items: end;
-            padding: 1rem 2rem 1rem 0;
-             @extend %Roboto316;
-            font-size: 1rem;
+        h3 {
+            @extend %Roboto518;
             font-weight: 700;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
+
+        p{
+            width: auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+        
+    .price{
+        display: flex;
+        align-items: end;
+        padding: 1rem 2rem 1rem 0;
+        @extend %Roboto316;
+        font-size: 1rem;
+        font-weight: 700;
+    }
     
 
-        .check {
-            width: 6rem;
-            margin-right: -6rem;
-            max-height: 100%;
-            background-color: $thirdcolor;
+    .check {
+        width: 6rem;
+        margin-right: -6rem;
+        max-height: 100%;
+        background-color: $thirdcolor;
+        transition: all 0.5s;
 
-            .fa-circle-check{
-                height: 100%;
-                color: #FFF;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 1.5rem;@keyframes stayVisible {
-                  0% { opacity: 1; }
-                  100% { opacity: 1; }
-                }
-            }  
-        }
-    }
-
-    .Dish:hover .check  {
-                margin-right: 0;
-                transition: all 0.5s;
-                animation-duration: 5s;
-                
-                
-                .fa-circle-check{
-                    animation: valid 0.7s linear;
-                }
-            } 
-             
-        
-
-
-
-
-    .LikeTitle {
-        margin-bottom: 2rem;
-        display: flex;
-        position: relative;
-        padding: 0 1rem;
-
-        .TitleResto{
-        width: 100%;
-        font-family: 'Shrikhand';
-        font-weight: 400;
-        font-size: 28px;
-        }
-
-        .LikeResto{
+        .fa-circle-check{
+            height: 100%;
+            color: #FFF;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
             align-items: center;
-            i, svg {
-                cursor: pointer;
-                font-size: 1.5rem;
-                position: absolute;
-                &.fa-solid {
-                    transition: transform 0.6s;
-                    transform: scale(0);
-                    font-size: 1.5rem;
-                }
-            }
+            font-size: 1.5rem;
+        }  
+    }
+}
 
-            &:hover{
-                i, svg {
-                    &.fa-solid {
-                        transform: scale(1);
-                        background-image: $degrade;
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                    }
-                }
-            }
-        }
+//Animation du check
+
+.dish:hover .check  {
+    margin-right: 0;
+    transition: all 0.5s;
+    animation-duration: 5s;
+                     
+    .fa-circle-check{
+        animation: valid 0.7s linear;
+    }
+} 
+             
+//////////////////////////////////////////////////////
+// Medium devices (tablets, less/equal than 1024px) //
+@media (min-width: 765px)  {
+    .menu{
+        padding: 2rem 4rem 0;
     }
 
-   
-
-
-
+    .like-title {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+}

@@ -2,31 +2,55 @@ footer {
     @extend %Roboto516;
     background-color: $maincolorbase;
     color: #fff;
-    padding: 22px;
+    padding: 1.5rem;
 
 
-.LogoFooter {
-    @extend .LogoTitre;
-    margin: 0%;
-    font-size: 18px;
-    color: white; 
-    margin-bottom: 16px;
+    .logo-footer {
+        font-family: 'Shrikhand';
+        font-weight: 400; 
+        margin: 0%;
+        font-size: 18px;
+        color: white; 
+        margin-bottom: 1rem;
+    }
+
+    ul, li{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        gap: 0.5rem;
+
+        i, svg {
+            color: #fff;
+        }
+        
+        a {
+            color: #fff;
+        }
+    }
 }
 
-ul, li{
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    gap: 7px;
+// Medium devices (tablets, less/equal than 1024px) //
+@media (min-width: 765px)  {
+    footer {
+        display: flex;
+        padding: 3rem 0 1rem;
+        flex-direction: row-reverse;
 
-    i, svg {
-        color: #fff;
+        ul {
+            li {
+                white-space: nowrap;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+                padding: 0;  
+                gap: 1.7rem;
+            } 
+        }
     }
-    a {
-        color: #fff;
+
+    footer h2.logo-footer{
+        margin: 0 2rem;
     }
-}
-
-
 
 }

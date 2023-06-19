@@ -11,6 +11,7 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
+	max-width: 100%;
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -25,9 +26,3 @@ ol, ul {
 a {
     text-decoration: none;
 }
-
-// blockquote:before, blockquote:after,
-// q:before, q:after {
-// 	content: '';
-// 	content: none;
-// }

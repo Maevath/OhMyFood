@@ -1,12 +1,12 @@
 // Génèral
-.TitleSection {
+.title-section {
     @extend %Roboto724;
 }
 
 // Section présentation (Barre de localisation + Texte description + bouton)
-.Presentation{ 
+.presentation{ 
     
-    .PresentationLocalization {
+    .presentation-localization {
         @include FlexCenter;
         background-color: $thirdcolorbase;
 
@@ -20,7 +20,7 @@
             border: none;
             background: transparent;
             @extend %Roboto317;
-            margin: 15px 0;
+            margin: 1rem 0;
             outline: none;
             text-align: center;
 
@@ -34,8 +34,9 @@
     } 
     
    
-    .PresentationText {
+    .presentation-text {
         @include GridCenter;
+        
         background-color: $secondcolorbase;
 
         h2 {
@@ -52,14 +53,16 @@
 
 
 // Section Fonctionnement 
-.Functioning {  
-    margin: 48px 0 68px 0;
+.functioning {  
+    
+    padding: 3rem 1rem;
 
 
-    .FunctioningArt {
+    .functioning-art {
+        width: 100%;
+        margin-top: 2rem;
         @include GridCenter;
-        margin: 20px 20px 20px 32px;
-        grid-gap: 25px;
+        grid-gap: 3rem;
 
         i:hover {
                 color: $maincolor;
@@ -69,7 +72,10 @@
             color: #7E7E7E;  
         }
 
-        .FunctioningSteps {
+        .functioning-steps {
+            position: relative;
+            width: 100%;
+            background-color: #008766;
             @include FlexCenter;
             @extend %Roboto516;
             background-color: $secondcolorbase;
@@ -79,13 +85,11 @@
             gap: 20px;
             cursor: pointer;
 
-            &:hover{
-                box-shadow: 0rem 0.1rem 1rem $maincolor;
-            }
+      
 
             .function-text{
                 @include FlexCenter;
-                padding: 1.5rem 0 1.5rem 2rem;
+                padding: 1.5rem 2rem;
                 gap: 1.5rem;
             }
             
@@ -93,14 +97,14 @@
 
         
 
-        .FunctioningSteps:hover .fa-mobile-screen,.FunctioningSteps:hover .fa-list-ul,.FunctioningSteps:hover .fa-store{
+        .functioning-steps:hover .fa-mobile-screen,.functioning-steps:hover .fa-list-ul,.functioning-steps:hover .fa-store{
             color: $maincolor;
             
         }
     }
 }
 
-.ListNumber{
+.list-number{
     position: absolute;
     display: flex;
     justify-content: flex-start;
@@ -110,7 +114,7 @@
     transform: scale(1);
     transform: translate(-1rem);
                 
-    .Number{
+    .number{
         position: absolute;
         display: flex;
         justify-content: center;
@@ -127,59 +131,67 @@
         font-weight: 500;
     }
 }
-// Section comprenant les articles de presentation des restaurant
-.ArtGroup {
-    position: relative;
-    margin-bottom: 6rem;
 
-    .ArtResto {
+
+// Section comprenant les articles de presentation des restaurant
+.eatery{
+    background-color: $secondcolorbase;
+    padding: 2rem 1rem;
+}
+
+.art-group {
+    position: relative;
+    margin-top: 2rem;
+    display: grid;
+    grid-gap: 3rem;
+
+    .art-resto {
         position: relative;
-        margin: 5%;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
         border-radius: 15px;
         
-        .ImgResto {
-                width: 100%;
-                height: 170px;
-                object-fit: cover;
-                border-radius: 15px 15px 0 0;
-            }
+        .img-resto {
+            width: 100%;
+            height: 170px;
+            object-fit: cover;
+            border-radius: 1rem 1rem 0 0;
+        }
           
         .parent-new{
             position: relative;
             display: flex;
             justify-content: end;
+
            .new{
                 @extend %Roboto516;
                 font-weight: 500;
                 color: #008766;
                 position: absolute;
-                margin: 13px;
-                padding: 7px;
+                margin: 0.75rem;
+                padding: 0.5rem;
                 background-color: $thirdcolor;
-                border-radius: 5%;
-        
+                border-radius: 0.25rem;
             } 
         }
         
 
-        .InfoResto {
+        .info-resto {
             display:flex;
             align-items: center;
             justify-content: space-between;
 
 
-            .TextResto {
+            .text-resto {
             @extend %Roboto317;
             font-size: 17px;
-            margin: 16px 13px 12px;
+            margin: 0.5rem 1rem;
 
                 p, h3 {
-                    gap: 5px;
+                    gap: 0.25rem;
                 }
             }
 
-            .LikeResto {
+            .like-resto {
                 position: relative;
                 padding: 0 1rem;
                 @include FlexCenter;
@@ -202,13 +214,77 @@
                             &.fa-solid {
                                 transform: scale(1);
                                 background-image: $degrade;
+                                background-clip: text;
                                 -webkit-background-clip: text;
-                                -webkit-text-fill-color: transparent;
+                                color: transparent;
                             }
                         }
                     }
 
             }
         }
+    }
+}
+
+
+
+// Medium devices (tablets, less/equal than 1024px) //
+@media (min-width: 765px)  {
+
+    // Section des restaurants et section des fonctionnement
+    .functioning, .eatery{
+        padding: 2.5rem 5rem;
+    }
+
+    //L'ensemble des bouton de la section fonctionnement
+    .functioning .functioning-art{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    //Bouton de la section des fonctionnement
+    .functioning .functioning-art .functioning-steps{
+        border-radius: 1.5rem;
+        height: 60px;
+    }
+
+    //Div contenant le texte et l'iconne des fonctionnement
+    .functioning .functioning-art .functioning-steps .function-text {
+        padding: 1rem 1.5rem 1rem 2rem;
+        font-size: 0.8rem;
+        font-weight: 200;
+    }
+}
+
+
+
+// Medium devices (tablets, less/equal than 1024px) //
+@media (min-width: 1025px) {
+
+    // Section des restaurants et section des fonctionnement
+    .functioning, .eatery{
+        padding: 3rem 6rem;
+    }
+   
+    //L'ensemble des bouton de la section fonctionnement
+    .functioning .functioning-art {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        align-items: center;
+        grid-gap: 7rem;
+        
+        .functioning-steps{
+            font-size: 1rem;
+
+            
+       }
+    }
+
+    //Articles des restaurants 
+    .art-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
     }
 }
